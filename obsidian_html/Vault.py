@@ -12,7 +12,7 @@ class Vault:
 
         self.html_template = html_template
         if html_template:
-            with open(html_template) as f:
+            with open(html_template, "r", encoding="utf8") as f:
                 self.html_template = f.read()
 
     def _add_backlinks(self):
@@ -54,5 +54,5 @@ class Vault:
                     title=note["title"], content=note["content"])
             else:
                 html = note["content"]
-            with open(os.path.join(out_dir, note["filename"]), "w") as f:
+            with open(os.path.join(out_dir, note["filename"]), "w", encoding="utf8") as f:
                 f.write(html)

@@ -11,7 +11,8 @@ setup(
     packages=['obsidian_html'],
     install_requires=[
       'markdown2',
-      'regex'
+      'regex',
+      'pypandoc'
     ],
     zip_safe=False,
     entry_points={
